@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll(".nav-link");
 const ul = document.querySelector("nav ul");
+const bar = document.querySelector(".menu-toggle input");
 
 document.body.addEventListener("click", function (e) {
   if (e.target.className == "nav-link") {
@@ -10,8 +11,7 @@ document.body.addEventListener("click", function (e) {
     e.target.classList.add("active");
   }
 });
-document.body.addEventListener("click", function (e) {
-  if ((e.target = ul)) {
-    ul.classList.toggle("slide");
-  }
+bar.addEventListener("click", function (e) {
+  console.log(e);
+  ul.classList.toggle("slide");
 });
