@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap");
+
+:root {
+  --primary: #75c6ef;
+  --secondary: #5176c3;
+  --text: rgb(87, 87, 87);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+}
+
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  color: var(--text);
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 40%;
+}
+.nav-link {
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+.active {
+  border-radius: 1.5rem;
+  color: white;
+  background-color: var(--primary);
+  background: linear-gradient(120deg, #75c6ef, #5175c39c);
+  transition: all 0.5s;
+}
+.active:hover {
+  color: white;
+}
+
+/* hambburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 28px;
+  height: 30px;
+  top: -5px;
+  right: -1px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--text);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 90vh;
+  align-items: center;
+}
+header .text-header {
+  color: var(--text);
+  width: 30%;
+}
+.text-header > h1 {
+  font-size: 4.5em;
+  font-weight: 900;
+}
+.text-header > h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+.text-header > p {
+  line-height: 150%;
+}
+.text-header > button {
+  margin-top: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--primary);
+  background: linear-gradient(120deg, #75c6ef, #5175c39c);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  border: none;
+}
+header img {
+  transform: scale(1.5);
+}
+/* responsive 768*/
+@media screen and (max-width: 992px) {
+  nav ul {
+    width: 60%;
+  }
+  .text-header > h1 {
+    font-size: 3em;
+  }
+  .text-header > h2 {
+    font-size: 2em;
+  }
+  header img {
+    transform: scale(1.2);
+  }
+}
+
+/* responsive 576 */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  .active {
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--secondary);
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .active:hover {
+    color: var(--secondary);
+  }
+  nav .slide {
+    display: flex;
+    animation: slideY 1s forwards cubic-bezier(0.37, 0.2, 0.69, 1.32);
+  }
+  @keyframes slideY {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 20vh;
+    }
+  }
+  header {
+    display: grid;
+    padding: 0 10%;
+    text-align: center;
+    grid-template-areas: "img" "text";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  header .img-header {
+    grid-area: img;
+  }
+  header img {
+    transform: scale(1);
+  }
+  header .text-header {
+    width: 100%;
+    grid-area: text;
+  }
+}
