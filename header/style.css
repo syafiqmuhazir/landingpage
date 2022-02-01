@@ -188,7 +188,6 @@ header img {
     display: grid;
     padding: 0 10%;
     text-align: center;
-    background-color: yellowgreen;
     grid-template-areas: "img img" "text text";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
