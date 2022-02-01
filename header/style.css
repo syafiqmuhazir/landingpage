@@ -139,7 +139,7 @@ header img {
     font-size: 2em;
   }
   header img {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -163,6 +163,7 @@ header img {
   .active {
     border-radius: 0;
     background-color: transparent;
+    background: transparent;
     color: var(--secondary);
   }
   .nav-link {
@@ -187,9 +188,10 @@ header img {
     display: grid;
     padding: 0 10%;
     text-align: center;
-    grid-template-areas: "img" "text";
+    background-color: yellowgreen;
+    grid-template-areas: "img img" "text text";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr;
   }
   header .img-header {
     grid-area: img;
