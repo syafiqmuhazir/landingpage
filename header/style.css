@@ -125,7 +125,7 @@ header .text-header {
   border: none;
 }
 header .img-navbar {
-  transform: scale(1.5);
+  transform: scale(1.8);
 }
 /* responsive 768*/
 @media screen and (max-width: 992px) {
