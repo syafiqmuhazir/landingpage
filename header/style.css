@@ -124,9 +124,7 @@ header .text-header {
   border-radius: 2rem;
   border: none;
 }
-header .img-navbar {
-  transform: scale(1.8);
-}
+
 /* responsive 768*/
 @media screen and (max-width: 992px) {
   nav ul {
@@ -137,9 +135,6 @@ header .img-navbar {
   }
   .text-header > h2 {
     font-size: 2em;
-  }
-  header .img-header {
-    transform: scale(1.1);
   }
 }
 
@@ -194,9 +189,6 @@ header .img-navbar {
   }
   header .img-header {
     grid-area: img;
-  }
-  header .img-header {
-    transform: scale(1);
   }
   header .text-header {
     width: 100%;
