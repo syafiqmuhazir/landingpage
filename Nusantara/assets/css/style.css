@@ -203,7 +203,6 @@ header p {
     font-size: 2em;
   }
   header p {
-    width: 80%;
-    text-align: center;
+    width: 95%;
   }
 }
