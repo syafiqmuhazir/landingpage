@@ -128,7 +128,7 @@ header .subjudul {
 }
 header p {
   font-family: "Roboto";
-  width: 400px;
+  width: 60%;
   padding: 10px 0;
 }
 .btn {
@@ -203,6 +203,6 @@ header p {
     font-size: 2em;
   }
   header p {
-    width: 95%;
+    width: 90%;
   }
 }
