@@ -194,4 +194,6 @@ header p {
   header .subjudul {
     font-size: 3em;
   }
+  header p{
+    width:80%
 }
