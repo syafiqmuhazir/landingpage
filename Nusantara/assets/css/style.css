@@ -109,9 +109,12 @@ nav .active:hover {
 
 /* header */
 header {
+  display: flex;
+  flex-direction: column;
   color: var(--text-color);
-  padding: 16% 10%;
-  height: 100%;
+  justify-content: center;
+  height: 100vh;
+  padding: 0% 10%;
 }
 header h1 {
   text-transform: uppercase;
@@ -149,6 +152,7 @@ header p {
 @media screen and (max-width: 576px) {
   main {
     height: 100vh;
+    position: top right;
   }
   .show {
     display: flex;
@@ -191,13 +195,15 @@ header p {
     display: flex;
   }
   header {
-    padding: 50% 10%;
+    padding: 0;
     text-align: center;
+    align-items: center;
   }
   header .subjudul {
-    font-size: 3em;
+    font-size: 2em;
   }
-  header p{
-    width:60%;
-      text-align: center;
+  header p {
+    width: 80%;
+    text-align: center;
+  }
 }
