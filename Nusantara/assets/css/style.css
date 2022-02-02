@@ -147,6 +147,9 @@ header p {
   }
 }
 @media screen and (max-width: 576px) {
+  main {
+    height: 100vh;
+  }
   .show {
     display: flex;
   }
